@@ -1,54 +1,94 @@
-# React + TypeScript + Vite
+Вот готовый шаблон `README.md` для вашего репозитория **WTFDMG_Front** (React + Vite + TypeScript), который включает всё необходимое для проекта IT-менторов:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```markdown
+# 🚀 WTFDMG Mentor Platform (Frontend)
 
-Currently, two official plugins are available:
+**Веб-приложение для поиска IT-менторов**  
+*Разрабатывается в связке с [бекендом на Go](https://github.com/MaKh09/WTFDMG_Back) и [мобильным приложением](https://github.com/MaKh09/WTFDMG_Mobile).*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📌 О проекте
+Площадка для IT-менторов, где они могут создавать профили, а начинающие разработчики — находить наставников и бронировать сессии.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Основной функционал:**
+- ✅ Просмотр карточек менторов
+- ✅ Фильтрация по технологиям (React, Kotlin, Go и др.)
+- ✅ Система бронирования и оплаты
+- ✅ Чат между ментором и учеником
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🛠 Технологии
+- **Frontend**: React 18 + TypeScript
+- **Стили**: Tailwind CSS (или SCSS)
+- **Сборка**: Vite
+- **API**: [В процессе написания](ссылка_на_доку_бека)
+- **Тестирование**: Jest + React Testing Library
+
+---
+
+## 🚀 Как запустить проект?
+
+### Установка зависимостей
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### Запуск dev-сервера
+```bash
+npm run dev
 ```
+Откроется на [http://localhost:5173](http://localhost:5173)
+
+### Сборка для production
+```bash
+npm run build
+```
+
+---
+
+## 🌿 Ветки и Git-процесс
+Мы используем **Git Flow**:
+- `main` — стабильная версия (только через PR)
+- `develop` — текущая разработка
+- `feature/*` — новые фичи (например, `feature/auth`)
+
+**Пример работы:**
+```bash
+git checkout develop
+git pull origin develop
+git checkout -b feature/mentor-card
+```
+
+---
+
+## 📁 Структура проекта
+```
+src/
+├── components/   # Reusable UI-компоненты
+│   ├── MentorCard.tsx
+│   └── Header.tsx
+├── pages/        # Страницы
+│   ├── Home.tsx
+│   └── Profile.tsx
+├── hooks/        # Кастомные хуки
+├── store/        # Zustand/Redux
+├── api/          # Запросы к бекенду
+└── assets/       # Изображения, шрифты
+```
+
+---
+
+## 🤝 Как внести вклад?
+1. Форкните репозиторий
+2. Создайте ветку (`git checkout -b feature/your-feature`)
+3. Сделайте коммит (`git commit -m "feat: add amazing feature"`)
+4. Запушьте (`git push origin feature/your-feature`)
+5. Откройте Pull Request
+
+---
+
+## 📜 Лицензия
+MIT © [Danila Mochalov/MaKho9]
+
